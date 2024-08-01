@@ -1,0 +1,3 @@
+INSERT INTO managers (manager_surname,manager_name,manager_login,manager_password) VALUES ('Георгиадис','Дмитрий','w','w');
+
+INSERT INTO managers (manager_surname,manager_name,manager_login,manager_password) VALUES ('Павлов','Олег','v','v');

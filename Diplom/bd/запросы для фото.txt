@@ -1,0 +1,39 @@
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/2071343/cff1e751063730b83aa0085291f319af/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/2752894/251f952dac86a9fb943545db3fad265b/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/5991263/8ae810fcbcd6b8d072505aaaf68b8bad/1200x900n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/1898314/5c0f30b04f1a693d66d4a0a80e46e65b/1200x900n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/2160630/0e4c3103c2dce4c1dbeb1e839c78a2e2/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/5485794/d338d5a58524fa1f25ab56002432a3f0/1200x900n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/1999239/4079f7407a68cdd28e7163512e9718c6/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/1729789/7c9f885e7f42ebb6d0f96c0894cf2f69/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/2159177/00e06b14786fdc92e48f997e6aca5f78/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://s.auto.drom.ru/i24205/c/photos/fullsize/volvo/v60/volvo_v60_674375.jpg');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/2088419/61d484d03001877337e7268a7e0900c7/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/2161514/635e95fc67781717fbc63b1ca9eae5ba/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/2177100/83a44340284293d24b8863cdb926efa0/1200x900n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/2153231/7f202dceac92d4d82123be4a520735a2/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/11595317/188ef66f8e1194971afba4ddc710d5cd/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/5231918/1a13f3762b67e5d51f4db12dcf832390/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/1879988/38a617a574535fd23ac8dcf85a13c59e/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/1595794/e76318c43a463a6c88e3868cbacaca5f/584x438n');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://s1.auto.drom.ru/photo/n6xZrb50Dp2h9AgoRkidF-21EZAeRyKNpVWQlS8Eck97muOMcCbuF_JiuE2EgZKVU118rGnPbfLSLmR7gLxzZajS3xeowYcf.jpg');
+
+INSERT INTO cars_photos (car_photo) VALUES ('https://avatars.mds.yandex.net/get-autoru-vos/1640662/73b96bc5309f10fb39108dda44def1bd/584x438n');

@@ -1,0 +1,135 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema auto
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema auto
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `auto` DEFAULT CHARACTER SET utf8 ;
+USE `auto` ;
+
+-- -----------------------------------------------------
+-- Table `auto`.`cars_photos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `auto`.`cars_photos` (
+  `id_car_photo` INT NOT NULL AUTO_INCREMENT,
+  `car_photo` BLOB NOT NULL,
+  PRIMARY KEY (`id_car_photo`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `auto`.`Cars`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `auto`.`Cars` (
+  `id_car` INT NOT NULL AUTO_INCREMENT,
+  `car_brand` VARCHAR(45) NOT NULL,
+  `car_model` VARCHAR(45) NOT NULL,
+  `car_release_year` VARCHAR(45) NOT NULL,
+  `car_body` VARCHAR(45) NOT NULL,
+  `car_fuel` VARCHAR(45) NOT NULL,
+  `car_eng_power` INT NOT NULL,
+  `car_price` INT NOT NULL,
+  `car_wheel_drive` VARCHAR(45) NOT NULL,
+  `cars_photos_id_cars_photos` INT NOT NULL,
+  PRIMARY KEY (`id_car`),
+  INDEX `fk_Cars_cars_photos1_idx` (`cars_photos_id_cars_photos` ASC) VISIBLE,
+  CONSTRAINT `fk_Cars_cars_photos1`
+    FOREIGN KEY (`cars_photos_id_cars_photos`)
+    REFERENCES `auto`.`cars_photos` (`id_car_photo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `auto`.`Clients`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `auto`.`Clients` (
+  `id_client` INT NOT NULL AUTO_INCREMENT,
+  `client_surname` VARCHAR(45) NOT NULL,
+  `client_name` VARCHAR(45) NOT NULL,
+  `client_login` VARCHAR(45) NOT NULL,
+  `client_password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_client`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `auto`.`Managers`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `auto`.`Managers` (
+  `id_manager` INT NOT NULL AUTO_INCREMENT,
+  `manager_surname` VARCHAR(45) NOT NULL,
+  `manager_name` VARCHAR(45) NOT NULL,
+  `manager_login` VARCHAR(45) NOT NULL,
+  `manager_password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_manager`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `auto`.`Sales`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `auto`.`Sales` (
+  `id_sale` INT NOT NULL AUTO_INCREMENT,
+  `sale_data` VARCHAR(45) NOT NULL,
+  `clients_id_client` INT NOT NULL,
+  `Cars_id_car` INT NOT NULL,
+  `Managers_id_manager` INT NOT NULL,
+  INDEX `fk_sales_clients1_idx` (`clients_id_client` ASC) VISIBLE,
+  PRIMARY KEY (`id_sale`),
+  INDEX `fk_Sales_Cars1_idx` (`Cars_id_car` ASC) VISIBLE,
+  INDEX `fk_Sales_Managers1_idx` (`Managers_id_manager` ASC) VISIBLE,
+  CONSTRAINT `fk_sales_clients1`
+    FOREIGN KEY (`clients_id_client`)
+    REFERENCES `auto`.`Clients` (`id_client`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Sales_Cars1`
+    FOREIGN KEY (`Cars_id_car`)
+    REFERENCES `auto`.`Cars` (`id_car`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Sales_Managers1`
+    FOREIGN KEY (`Managers_id_manager`)
+    REFERENCES `auto`.`Managers` (`id_manager`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `auto`.`Views`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `auto`.`Views` (
+  `id_view` INT NOT NULL AUTO_INCREMENT,
+  `view_data` VARCHAR(45) NOT NULL,
+  `view_time` VARCHAR(45) NOT NULL,
+  `Cars_id_car` INT NOT NULL,
+  `Clients_id_client` INT NOT NULL,
+  PRIMARY KEY (`id_view`),
+  INDEX `fk_Views_Cars1_idx` (`Cars_id_car` ASC) VISIBLE,
+  INDEX `fk_Views_Clients1_idx` (`Clients_id_client` ASC) VISIBLE,
+  CONSTRAINT `fk_Views_Cars1`
+    FOREIGN KEY (`Cars_id_car`)
+    REFERENCES `auto`.`Cars` (`id_car`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Views_Clients1`
+    FOREIGN KEY (`Clients_id_client`)
+    REFERENCES `auto`.`Clients` (`id_client`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

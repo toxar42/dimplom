@@ -1,0 +1,59 @@
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Mercedes-Benz','C-Class 180',2011,'седан','бензин',156,1700000,'задний',1);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Kia','Ceed',2016,'универсал','бензин',135,1650000,'передний',2);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Volkswagen','Polo V',2017,'седан','бензин',110,1370000,'передний',3);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Opel','Mokka',2013,'кроссовер','бензин',140,1145000,'полный',4);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Subaru','Outback',2010,'универсал','бензин',167,1330000,'полный',5);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Nissan','Qashqai',2015,'кроссовер','бензин',144,1859000,'полный',6);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Mazda',6,2014,'седан','бензин',192,1805000,'передний',7);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Kia','Optima',2016,'седан','бензин',188,2000000,'передний',8);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Geely','Coolray',2020,'кроссовер','бензин',150,1850000,'передний',9);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Volvo','V60',2014,'универсал','бензин',150,1200000,'передний',10);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Nissan','X-Trail',2018,'кроссовер','бензин',144,2499000,'полный',11);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Skoda','Superb',2018,'универсал','дизель',190,2820000,'передний',12);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Audi','A6',2016,'седан','дизель',190,2450000,'передний',13);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Volkswagen','Passat',2017,'седан','бензин',180,2300000,'передний',14);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Volkswagen','Tiguan',2018,'кроссовер','бензин',180,3525000,'полный',15);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Audi','A4',2020,'седан','дизель',190,3550000,'полный',16);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Mitsubishi','Outlander',2022,'кроссовер','бензин',167,3930000,'полный',17);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Tesla','Model 3 Standart Plus',2021,'седан','электро',258,4000000,'задний',18);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Volvo','S90',2021,'седан','бензин',190,3700000,'полный',19);
+
+INSERT INTO cars (car_brand,car_model,car_release_year,car_body,car_fuel,car_eng_power,car_price,car_wheel_drive,cars_photos_id_cars_photos) 
+VALUES ('Volvo','V90',2020,'универсал','бензин',300,36200000,'полный',20);
