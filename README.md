@@ -1,1 +1,1 @@
-# dimplom
+# save dir and open main
