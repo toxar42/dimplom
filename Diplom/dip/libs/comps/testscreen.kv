@@ -1,0 +1,109 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Pathes libs.settings.settings.Pathes
+#:import Colors libs.settings.settings.Colors
+<TestScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        Widget:
+            size_hint_y: None
+            height: dp(20)
+        MDLabel:
+            text: 'Тест'
+            text_color: get_color_from_hex(Colors().darkgrey)
+            font_size: dp(32)
+            bold: True
+            theme_text_color: "Custom"
+            halign: 'left'
+            adaptive_height: True
+            padding: dp(20), 0, 0, 0
+        Widget:
+            size_hint_y: None
+            height: dp(20)
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: 0, 0, 0, dp(40)
+            # adaptive_height: True
+            MDLabel:
+                id: question_num
+                text: 'Вопрос 1'
+                text_color: get_color_from_hex(Colors().darkgrey)
+                font_size: dp(26)
+                bold: True
+                theme_text_color: "Custom"
+                halign: 'center'
+                adaptive_height: True
+        MDBoxLayout:
+            orientation: 'vertical'
+            adaptive_height: True
+            padding: dp(25), 0, dp(25), dp(15)
+            size_hint_x: .8
+            radius: dp(20)
+            md_bg_color: get_color_from_hex(Colors().lighttext)
+            pos_hint: {'center_x': .5}
+            spacing: dp(10)
+            MDLabel:
+                id: question
+                text: 'Каковы ваши ежедневные потребности от автомобиля?'
+                text_color: get_color_from_hex(Colors().darkgrey)
+                font_size: dp(16)
+                theme_text_color: "Custom"
+                halign: 'center'
+                adaptive_height: True
+                padding: 0, dp(10), 0, 0
+            MDCard:
+                md_bg_color: get_color_from_hex(Colors().lightgrey)
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                size_hint: None, None
+                size: dp(180), dp(40)
+                ripple_behavior: True
+                radius: dp(10)
+                on_release:
+                    root.write_answer(self.children[0].text)
+                MDLabel:
+                    id: answer_1
+                    text: 'комфорт'
+                    theme_text_color: "Custom"
+                    bold: True
+                    font_size: dp(20)
+                    text_color: get_color_from_hex(Colors().lighttext)
+                    halign: 'center'
+                    valign: 'middle'
+            MDCard:
+                md_bg_color: get_color_from_hex(Colors().lightgrey)
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                size_hint: None, None
+                size: dp(180), dp(40)
+                ripple_behavior: True
+                radius: dp(10)
+                on_release:
+                    root.write_answer(self.children[0].text)
+                MDLabel:
+                    id: answer_2
+                    text: 'вместимость'
+                    theme_text_color: "Custom"
+                    bold: True
+                    font_size: dp(20)
+                    text_color: get_color_from_hex(Colors().lighttext)
+                    halign: 'center'
+                    valign: 'middle'
+            MDCard:
+                md_bg_color: get_color_from_hex(Colors().lightgrey)
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                size_hint: None, None
+                size: dp(180), dp(40)
+                ripple_behavior: True
+                radius: dp(10)
+                on_release:
+                    root.write_answer(self.children[0].text)
+                MDLabel:
+                    id: answer_3
+                    text: 'экономичность'
+                    theme_text_color: "Custom"
+                    bold: True
+                    font_size: dp(20)
+                    text_color: get_color_from_hex(Colors().lighttext)
+                    halign: 'center'
+                    valign: 'middle'
+
+            
+        Widget:

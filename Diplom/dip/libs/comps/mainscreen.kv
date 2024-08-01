@@ -1,0 +1,31 @@
+#:import Pathes libs.settings.settings.Pathes
+#:import Colors libs.settings.settings.Colors
+#:import NavBar libs.comps.navbar.NavBar
+#:import UserScreen libs.comps.userscreen.UserScreen
+#:import CatalogScreen libs.comps.catalogscreen.CatalogScreen
+#:import TestScreen libs.comps.testscreen.TestScreen
+#:import ManagerScreen libs.comps.managerscreen.ManagerScreen
+<MainScreen>:
+    MDBoxLayout:
+        id: mainscreenbox
+        orientation: 'vertical'
+        adaptive_height: True
+        size_hint_y: 1
+        ScreenManager:
+            id: manager
+            pos_hint: {'center_x': .5}
+            CatalogScreen:
+                id: catalogscreen
+                name: 'catalogscreen'
+            TestScreen:
+                id: testscreen
+                name: 'testscreen'
+            UserScreen:
+                id: userscreen
+                name: 'userscreen'
+            ManagerScreen:
+                id: managerscreen
+                name: 'managerscreen'
+        NavBar:
+            id: navbar
+        

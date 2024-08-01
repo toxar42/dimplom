@@ -1,0 +1,66 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Colors libs.settings.settings.Colors
+<NavBar>:
+    size_hint: 1, None
+    height: dp(60)
+    pos_hint: {'center_x': .5}
+    md_bg_color: get_color_from_hex('#ffffff')
+    # radius: dp(10)
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.4
+        BoxShadow:
+            pos: self.pos
+            size: self.size
+            offset: 0, dp(0)
+            spread_radius: dp(0), dp(0)
+            # border_radius: dp(16), dp(16), dp(16), dp(16)
+            blur_radius: dp(20)
+    MDBoxLayout:
+        size_hint: 1, None
+        height: dp(60)
+        orientation: 'vertical'
+        MDBoxLayout:
+            id:buttons
+            size_hint_y: None
+            height: dp(60)
+            adaptive_width: True
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            spacing: dp(35)
+            MDIconButton:
+                id:nav1
+                icon: "shopping"
+                ripple_scale: 0
+                user_font_size: "30sp"
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex(Colors().lightgrey)
+                pos_hint: {'center_y': .5}
+                on_release:
+                    root.change_color(self)
+                    root.parent.parent.ids.manager.transition.direction = 'right'
+                    root.parent.parent.ids.manager.current = 'catalogscreen'
+            MDIconButton:
+                id:nav2
+                icon: "ab-testing"
+                ripple_scale: 0
+                user_font_size: "30sp"
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex(Colors().darkgrey)
+                pos_hint: {'center_y': .5}
+                on_release:
+                    root.change_color(self)
+                    if root.parent.parent.ids.manager.transition.direction == 'left': root.parent.parent.ids.manager.transition.direction = 'right'
+                    else: root.parent.parent.ids.manager.transition.direction = 'left'
+                    root.parent.parent.ids.manager.current = 'testscreen'
+            MDIconButton:
+                id:nav3
+                icon: "account"
+                ripple_scale: 0
+                user_font_size: "30sp"
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex(Colors().darkgrey)
+                pos_hint: {'center_y': .5}
+                on_release:
+                    root.change_color(self)
+                    root.parent.parent.ids.manager.transition.direction = 'left'
+                    root.parent.parent.ids.manager.current = 'userscreen'    

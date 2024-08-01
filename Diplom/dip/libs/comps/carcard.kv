@@ -1,0 +1,86 @@
+#:import Pathes libs.settings.settings.Pathes
+#:import Colors libs.settings.settings.Colors
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+<CarCard>:
+    size_hint: None, None
+    size: app.screens.ids.screenmanager.width * .9 - dp(20), app.screens.ids.screenmanager.width / 1.2
+    md_bg_color: get_color_from_hex(Colors().lighttext)
+    orientation: 'vertical'
+    padding: dp(10)
+    spacing: dp(10)
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.4
+        BoxShadow:
+            pos: self.pos
+            size: self.size
+            offset: dp(0), dp(0)
+            spread_radius: dp(0), dp(0)
+            border_radius: dp(10), dp(10), dp(10), dp(10)
+            blur_radius: dp(10)
+    MDBoxLayout:
+        adaptive_height: True
+        MDLabel:
+            id: name
+            text: 'BMW'
+            bold: True
+            font_size: dp(24)
+            adaptive_height: True
+            pos_hint: {'center_x': .5}
+    FitImage:
+        id: image
+        source: ''
+        size_hint_x: 1
+        radius: dp(15)
+        pos_hint: {'center_x': .5}
+    MDBoxLayout:
+        spacing: dp(20)
+        adaptive_height: True
+        MDBoxLayout:
+            adaptive_height: True
+            adaptive_width: True
+            orientation: 'vertical'
+            pos_hint: {'center_y': .5}
+            MDLabel:
+                id: price
+                text: 'Цена 1500000р'
+                text_color: get_color_from_hex(Colors().darkgrey)
+                font_size: dp(16)
+                theme_text_color: "Custom"
+                adaptive_height: True
+                adaptive_width: True
+            MDLabel:
+                id: horsepower
+                text: 'Л.С. 300'
+                text_color: get_color_from_hex(Colors().darkgrey)
+                font_size: dp(16)
+                theme_text_color: "Custom"
+                adaptive_height: True
+                adaptive_width: True
+            MDLabel:
+                id: privod
+                text: 'Привеод: задний'
+                text_color: get_color_from_hex(Colors().darkgrey)
+                font_size: dp(16)
+                theme_text_color: "Custom"
+                adaptive_height: True
+                adaptive_width: True
+        MDCard:
+            id: button
+            md_bg_color: get_color_from_hex(Colors().lightgrey)
+            pos_hint: {'center_y': .5}
+            size_hint: None, None
+            size: dp(130), dp(40)
+            ripple_behavior: True
+            radius: dp(10)
+            on_release:
+                root.open_dialog()
+            MDLabel:
+                id: text_button
+                text: 'Записаться'
+                theme_text_color: "Custom"
+                bold: True
+                font_size: dp(20)
+                text_color: get_color_from_hex(Colors().lighttext)
+                halign: 'center'
+                valign: 'middle'

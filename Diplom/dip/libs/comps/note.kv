@@ -1,0 +1,65 @@
+#:import Colors libs.settings.settings.Colors
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+<Note>:
+    size_hint_y: None
+    size_hint_x: .9
+    height: dp(55)
+    spacing: dp(10)
+    padding: dp(15), 0, dp(15), 0
+    anchor: "right"
+    pos_hint: {'center_x':.5}
+    max_opened_x: dp(50)
+    MDCardSwipeLayerBox:
+        radius: dp(8)
+        padding: dp(10), 0, 0, 0
+        Widget:
+        MDSeparator:
+            orientation: 'vertical'
+        MDIconButton:
+            icon: 'delete-forever'
+            pos_hint:{'center_y': .5}
+            on_release:
+                root.delete_note(root)
+    MDCardSwipeFrontBox:
+        padding: dp(10)
+        spacing: dp(10)
+        radius: dp(8)
+        md_bg_color: get_color_from_hex(Colors().lightgrey)
+        MDLabel:
+            text: 'Запись на '
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex(Colors().darkgrey)
+            font_size: dp(18)
+            adaptive_height: True
+            adaptive_width: True
+            valign: 'center'
+            pos_hint: {'center_y':.5}
+        MDLabel:
+            id: date
+            text: '28.04.2024'
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex(Colors().darkgrey)
+            font_size: dp(18)
+            adaptive_height: True
+            adaptive_width: True
+            valign: 'center'
+            pos_hint: {'center_x':.5,'center_y':.5}
+        MDLabel:
+            text: ' в '
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex(Colors().darkgrey)
+            font_size: dp(18)
+            adaptive_height: True
+            adaptive_width: True
+            valign: 'center'
+            pos_hint: {'center_x':.5,'center_y':.5}
+        MDLabel:
+            id: time
+            text: '18:30'
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex(Colors().darkgrey)
+            font_size: dp(18)
+            adaptive_height: True
+            adaptive_width: True
+            valign: 'center'
+            pos_hint: {'center_x':.5,'center_y':.5}

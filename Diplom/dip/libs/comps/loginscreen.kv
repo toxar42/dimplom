@@ -1,0 +1,78 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Pathes libs.settings.settings.Pathes
+#:import Colors libs.settings.settings.Colors
+<LoginScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: 0, 0, 0, dp(40)
+            # adaptive_height: True
+            MDLabel:
+                text: 'Вход'
+                text_color: get_color_from_hex(Colors().darkgrey)
+                font_size: dp(32)
+                bold: True
+                theme_text_color: "Custom"
+                halign: 'center'
+                adaptive_height: True
+        MDBoxLayout:
+            orientation: 'vertical'
+            adaptive_height: True
+            padding: dp(25), 0, dp(25), dp(15)
+            size_hint_x: .8
+            radius: dp(20)
+            md_bg_color: get_color_from_hex(Colors().lighttext)
+            pos_hint: {'center_x': .5}
+            MDTextField:
+                id: login
+                hint_text: "Логин"
+                line_color_normal: get_color_from_hex(Colors().darktext)
+                hint_text_color_normal: get_color_from_hex(Colors().darktext)
+                hint_text_color_focus: get_color_from_hex(Colors().darktext)
+                line_color_focus: get_color_from_hex(Colors().darktext)
+                text_color_normal: get_color_from_hex(Colors().darktext)
+                text_color_focus: get_color_from_hex(Colors().darktext)
+                on_focus: root.focus()
+            MDTextField:
+                id: password
+                hint_text: "Пароль"
+                line_color_normal: get_color_from_hex(Colors().darktext)
+                hint_text_color_normal: get_color_from_hex(Colors().darktext)
+                hint_text_color_focus: get_color_from_hex(Colors().darktext)
+                line_color_focus: get_color_from_hex(Colors().darktext)
+                text_color_normal: get_color_from_hex(Colors().darktext)
+                text_color_focus: get_color_from_hex(Colors().darktext)
+                on_focus: root.focus()
+            MDFlatButton:
+                text: 'Регистрация'
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex(Colors().darktext)
+                font_size: dp(16)
+                pos_hint: {'center_x': .5}
+                on_release:
+                    app.screens.ids.screenmanager.transition.direction = 'left'
+                    app.screens.ids.screenmanager.current = 'signupscreen'
+        MDBoxLayout:
+            adaptive_height: True
+            size_hint_x: 1
+            orientation: 'vertical'
+            padding: 0, dp(40), 0, dp(15)
+            MDCard:
+                md_bg_color: get_color_from_hex(Colors().lightgrey)
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                size_hint: None, None
+                size: dp(180), dp(40)
+                ripple_behavior: True
+                radius: dp(10)
+                on_release:
+                    root.check_data()
+                MDLabel:
+                    text: 'Войти'
+                    theme_text_color: "Custom"
+                    bold: True
+                    font_size: dp(20)
+                    text_color: get_color_from_hex(Colors().lighttext)
+                    halign: 'center'
+                    valign: 'middle'
+        Widget:

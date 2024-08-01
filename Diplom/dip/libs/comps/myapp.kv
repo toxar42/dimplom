@@ -1,0 +1,19 @@
+#:import LoginScreen libs.comps.loginscreen.LoginScreen
+#:import SignupScreen libs.comps.signupscreen.SignupScreen
+#:import MainScreen libs.comps.mainscreen.MainScreen
+<MyApp>:
+    orientation: 'vertical'
+    ScreenManager:
+        id: screenmanager
+        pos_hint: {'center_x': .5}
+        LoginScreen:
+            id: loginscreen
+            name: 'loginscreen'
+        SignupScreen:
+            id: signupscreen
+            name: "signupscreen"
+        MainScreen:
+            id: mainscreen
+            name: 'mainscreen'
+
+                

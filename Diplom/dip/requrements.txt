@@ -1,0 +1,4 @@
+#python 3.10.6
+
+pip install kivy==2.2.1
+pip install kivymd==1.2.0
